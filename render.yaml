@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: tgaz-bot
+    runtime: python
+    buildCommand: pip install --upgrade pip setuptools wheel && pip install -r requirements.txt
+    startCommand: python bot.py
+    plan: free
+    envVars:
+      - key: TOKEN
+        value: 7971701925:AAGr7HiOrCcnKeIxMjrLzisiX4LpSLMg-b4
+      - key: PYTHON_VERSION
+        value: 3.11.8
